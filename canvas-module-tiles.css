@@ -43,6 +43,10 @@
 	font-weight: bold;
 }
 
+.ou-ModuleCard__header-title.no-actions {
+	margin-right: 0px;
+}
+
 .ou-drop-down-arrow {
     float: right;
     padding: 14px 0px 0px 0px;

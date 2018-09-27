@@ -16,6 +16,7 @@
 // TODO Could - show completion either on links or as e.g 10/12 - will have to reinstate msd_getSelfThenModules AND chcek that the user is a students and will therefore have completion data
 
 /* Configurable variables */
+var showOnModulesHomePage = 0;	//Should the module tiles be shown at the top of the Modules Home Page. 0 = No; 1 = Yes. Suggest defaulting to 0, so all courses using the Modules Home Page aren't immediately affected when this is applied to a subaccount.
 var noOfColumnsPerRow = 4;  //no of columns per row of tiles at top of Modules page - 1, 2, 3, 4, 6 or 12 - ONLY USE 4 for the moment
 var tileImagesFolderName = "tiles";
 /* first 9 are requested colors, rest are randomly selected from: https://www.ox.ac.uk/public-affairs/style-guide/digital-style-guide */
@@ -35,7 +36,7 @@ var tileImageUrls = [];
 
 /* Wait until DOM ready before loading tiles */
 function msd_domReady () {
-	if(divCourseHomeContent && divContextModulesContainer){
+	if(divCourseHomeContent && divContextModulesContainer && showOnModulesHomePage){
 		//we're in the modules page as a home page
 		//first delete any existing nav container
 		var existingModuleNav = document.getElementById('module_nav');

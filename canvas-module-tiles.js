@@ -186,7 +186,8 @@ function msd_getTileImageUrls(courseId, imagesFolderId) {
 function msd_getModules(courseId, tileImageUrls) {
 	var csrfToken = msd_getCsrfToken();
 	//fetch('/api/v1/courses/' + courseId + '/modules?include=items&student_id=' + userId,{
-    fetch('/api/v1/courses/' + courseId + '/modules?include=items',{
+	//JHM 2018-10-26: Added &per_page=100, otherwise only returns the first 10
+    fetch('/api/v1/courses/' + courseId + '/modules?include=items&per_page=100',{
 			method: 'GET',
 			credentials: 'include',
 			headers: {

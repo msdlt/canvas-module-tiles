@@ -20,7 +20,20 @@ var showOnModulesHomePage = 0;	//Should the module tiles be shown at the top of 
 var noOfColumnsPerRow = 4;  //no of columns per row of tiles at top of Modules page - 1, 2, 3, 4, 6 or 12 - ONLY USE 4 for the moment
 var tileImagesFolderName = "tiles";
 /* first 9 are requested colors, rest are randomly selected from: https://www.ox.ac.uk/public-affairs/style-guide/digital-style-guide */
-var moduleColours = ['#e8ab1e','#91b2c6','#517f96','#1c4f68','#400b42','#293f11','#640D14','#b29295','#002147','#002147','#cf7a30','#a79d96','#f5cf47','#fb8113','#f3f1ee','#aab300','#043946','#be0f34','#a1c4d0','#a1c4d0','#122f53','#0f7361','#3277ae','#872434','#44687d','#517fa4','#177770','#be0f34','#d34836','#70a9d6','#69913b','#d62a2a','#5f9baf','#09332b','#44687d','#721627','#9eceeb','#330d14','#006599','#cf7a30','#a79d96','#be0f34','#001c3d','#ac48bf','#9c4700','#c7302b','#ebc4cb','#1daced'];
+//JHM 2018-20-16: Removed some that were too light, and reordered some that did not look good next to each other, but only up to the first 14 colours (3.5 lines)
+var moduleColours = [
+	'#e8ab1e','#91b2c6','#517f96','#1c4f68',
+	'#400b42','#293f11','#640D14','#b29295',
+	'#002147','#cf7a30','#a79d96','#aab300',
+	'#872434','#043946','#fb8113','#be0f34',
+	'#a1c4d0','#122f53','#0f7361','#3277ae',
+	'#44687d','#517fa4','#177770','#be0f34',
+	'#d34836','#70a9d6','#69913b','#d62a2a',
+	'#5f9baf','#09332b','#44687d','#721627',
+	'#9eceeb','#330d14','#006599','#cf7a30',
+	'#a79d96','#be0f34','#001c3d','#ac48bf',
+	'#9c4700','#c7302b','#ebc4cb','#1daced'
+];
 
 /* DOM elements to chcek for */
 var divCourseHomeContent = document.getElementById('course_home_content');  //is this Home
